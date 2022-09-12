@@ -1,0 +1,12 @@
+
+<div class="container">
+
+    <app-menu *ngIf="isMenuVisible" [movies]="movies" (genreClick)="handleGenreClick($event)"></app-menu>
+
+    <div class="main">
+        <app-header (toggleMenu)="handleToggleMenu()"></app-header>
+
+        <app-content [movies]="filteredMovies"></app-content>
+    </div>
+
+</div>

@@ -1,0 +1,23 @@
+
+.header {
+    display: flex;
+    padding: 15px 30px;
+}
+
+.menu {
+    cursor: pointer;
+    & > div {
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+    }
+} 
+
+.title {
+    margin: 0 20px;
+}
+h1 {
+    color: red;
+    margin: 0;
+}

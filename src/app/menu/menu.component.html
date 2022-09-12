@@ -1,0 +1,11 @@
+
+<div class="menu">
+    Genres list
+    <ul>
+        <li class="item"><span [ngClass]="{'selected': selectedGenre==='all'}" (click)="handleGenreClick('all')">All</span></li>
+        <li class="item" *ngFor="let genre of displayGenres">
+            <span [ngClass]="{'selected': selectedGenre===genre}" (click)="handleGenreClick(genre)">{{genre}}</span>
+        </li>
+    </ul>
+</div>
+

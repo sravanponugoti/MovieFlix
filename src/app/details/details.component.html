@@ -1,0 +1,17 @@
+<img [src]="movie?.poster" width="400" />
+<h3>{{movie?.title}}</h3>
+<div>
+    <label>Genres: </label> <span *ngFor="let genre of movie?.genres; let i=index"><span *ngIf="i>0"> | </span>{{genre}}</span>
+</div>
+<div>
+    <label>Languages: </label> <span *ngFor="let lang of movie?.languages; let i=index" class="language"><span *ngIf="i>0"> | </span>{{lang}}</span>
+</div>
+<div *ngIf="movie?.tomatoes?.critic?.rating">
+    <label>Rating: </label> {{movie?.tomatoes?.critic?.rating}} / 10
+</div>
+<div>
+    <label>Cast: </label> <span *ngFor="let member of movie?.cast; let i=index"><span *ngIf="i>0">, </span>{{member}}</span>
+</div>
+<div>
+    <label>Plot: </label> {{movie?.plot}}
+</div>

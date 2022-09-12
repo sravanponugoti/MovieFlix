@@ -1,0 +1,12 @@
+<div class="card" (click)="handleMovieClick()">
+    <img [src]="movie.poster" height="400" />
+    <div>
+        <span *ngFor="let genre of movie.genres; let i=index"><span *ngIf="i>0"> | </span>{{genre}}</span>
+    </div>
+    <div>
+        <span *ngFor="let lang of movie.languages; let i=index" class="language"><span *ngIf="i>0"> | </span>{{lang}}</span>
+    </div>
+    <div class="rating" *ngIf="movie?.tomatoes?.critic?.rating">
+        {{movie?.tomatoes?.critic?.rating}} / 10
+    </div>
+</div>
